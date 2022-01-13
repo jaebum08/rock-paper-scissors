@@ -16,8 +16,8 @@
     <main class="main">
         <div class="scoreboard">
             <h2 class="score-info">🦑🎮 👧🏻 🔺🔴⭐️☂️</h2>
-            <h2 class="score-info">Rock Paper Scissors (Squid Game Version)</h2>
-            <h3 class="score-message">First to score 5 points wins the game</h3>
+            <h2 class="score-info" id="scoreInfo">Rock Paper Scissors (Squid Game Version)</h2>
+            <h3 class="score-message" id="scoreMessage">First to score 5 points wins the game</h3>
             <div class="score-container">
                 <div class="score-box" id="playerSign">
                     <div class="sign" id="playerSign">?</div>
@@ -32,7 +32,7 @@
         <div class="buttons">
             <button class="btn btn-square" id="rockBtn">
                 <div class="sign">
-                    <img class ="sign-img" src="/images/circle.png" alt="cirlce_man">
+                    <img class ="sign-img" src="/images/circle.png" alt="circle_man">
                 </div>
             </button>
             <button class="btn btn-square" id="paperBtn">
@@ -42,7 +42,7 @@
             </button>
             <button class="btn btn-square" id="scissorsBtn">
                 <div class="sign">
-                    <img class ="sign-img" src="/images/triangle.png" alt="cirlce_man">
+                    <img class ="sign-img" src="/images/triangle.png" alt="scissors_man">
                 </div>
             </button>
         </div>
@@ -52,16 +52,17 @@
         <br>
         <p>Copyright ©
             <script>
-                document.write(newDate().getFullYear())
+                // document.write(newDate().getFullYear())
             </script>
             jaebum08
         </p>
     </footer>
-    <div class="modal">
+    <div class="modal" id="endGameModal">
         <p class="m-title" id = "endMsg">Hello</p>
-        <button class="btn btn-reset">Play Again</button>
+        <button class="btn btn-reset" id="restartBtn">Play Again</button>
     </div>
     <div class="overlay" id="overlay"></div>
+
     <script src="script.js"></script>
 </body>
 </html> 
