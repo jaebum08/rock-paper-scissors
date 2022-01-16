@@ -47,7 +47,7 @@ const scoreMessage = document.getElementById("scoreMessage");
 const playerSign = document.getElementById("playerSign");
 const frontManSign = document.getElementById("frontManSign");
 const playerScoreShow = document.getElementById("playerScore");
-const frontManScoreShow = document.getElementById("frontManscore");
+const frontManScoreShow = document.getElementById("frontManScore");
 
 const rockBtn = document.getElementById("rockBtn");
 const paperBtn = document.getElementById("paperBtn");
@@ -79,17 +79,17 @@ function handleClick(playerSelection) {
 
     if (isGameOver()) {
         openEndGameModal()
-        setEndMsg()
+        setFinalMsg()
     }
 }
 
 function updateChoices(playerSelection,frontManSelection) {
     switch (playerSelection) {
         case "ROCK":
-            var img = document.createElement('img');
-            img.src = './images/circle.png';
-            playerSign.innerHTML="<img src=./images/circle.png>";
-            playerSign.textContent = '✋'
+            // var img = document.createElement('img');
+            // img.src = './images/circle.png';
+            // playerSign.innerHTML="<img src=./images/circle.png>";
+            playerSign.textContent = '✊'
             break
         case "PAPER":
             playerSign.textContent = '✋'
@@ -145,6 +145,12 @@ function openEndGameModal() {
 function closeEndGameModal() {
     endGameModal.classList.remove('active');
     overlay.classList.remove('active');
+}
+
+function setFinalMsg() {
+    return playerScore > frontManscore 
+        ? (endgameMsg.textContent = "You Won 4.56 Million Dollars")
+        : (endgameMsg.textContet = "You lost to the Front Man ...")
 }
 
 function restartGame() {
