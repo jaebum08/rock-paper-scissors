@@ -150,7 +150,7 @@ function closeEndGameModal() {
 function setFinalMsg() {
     return playerScore > frontManscore 
         ? (endgameMsg.textContent = "You Won 4.56 Million Dollars")
-        : (endgameMsg.textContet = "You lost to the Front Man ...")
+        : (endgameMsg.textContent = "You lost to the Front Man ...")
 }
 
 function restartGame() {
