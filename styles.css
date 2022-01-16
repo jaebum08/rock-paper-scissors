@@ -93,6 +93,10 @@ button {
     font-size:24px;
     font-weight: bold;
 }
+.score-img {
+    width:180px;
+    height: 216px;
+}
 
 .buttons {
     display: flex;
@@ -156,7 +160,7 @@ button {
     width: 300px;
     border-radius: 10px;
     opacity:0.9;
-    background-color: #00d1ff;
+    background-color: var(--secondary-dark);
     text-align: center;
     font-size: 32px;
     transform: translate(-50%,-50%) scale(0);
